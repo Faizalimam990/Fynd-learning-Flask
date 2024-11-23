@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fynd Flask Form</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f7f8fa;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        h2 {
+            text-align: center;
+            color: #581ADF;
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
+
+        /* Form Container */
+        .form-container {
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .form-container h2 {
+            color: #581ADF;
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+
+        label {
+            font-size: 16px;
+            color: #333;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+            background-color: #f9f9f9;
+            transition: all 0.3s ease;
+        }
+
+        input[type="text"]:focus {
+            border-color: #581ADF;
+            outline: none;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 12px;
+            background-color: #581ADF;
+            color: white;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            background-color: #451092;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 600px) {
+            .form-container {
+                padding: 15px;
+                margin: 20px;
+            }
+
+            h2 {
+                font-size: 20px;
+            }
+
+            .submit-btn {
+                font-size: 16px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+
+            <div class="form-container col-md-5 col-12">
+                <h2>This is a POST Method Page</h2>
+                <form action="/users/" method="POST">
+                    <h2>FYND FLASK FORM</h2>
+                    <label for="fname">First Name</label>
+                    <input type="text" id="fname" name="fname" required>
+
+                    <label for="lname">Last Name</label>
+                    <input type="text" id="lname" name="lname" required>
+
+                    <button type="submit" class="submit-btn">Submit</button>
+                </form>
+            </div>
+
+            <div class="form-container col-md-5 col-12">
+                <h2>This is a GET Method Page</h2>
+                <form action="/users/" method="GET">
+                    <h2>FYND FLASK FORM</h2>
+                    <label for="fname">First Name</label>
+                    <input type="text" id="fname" name="fname" required>
+
+                    <label for="lname">Last Name</label>
+                    <input type="text" id="lname" name="lname" required>
+
+                    <button type="submit" class="submit-btn">Submit</button>
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

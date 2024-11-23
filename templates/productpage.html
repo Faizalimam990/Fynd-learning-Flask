@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page</title>
+</head>
+<body>
+    <h1>Getting Products</h1>
+    
+    <ul>
+    {% for product in product_get %}
+        <li>
+            <strong>Product Name:</strong> {{ product.Name }} <br>
+            <strong>Price:</strong> {{ product.Price }}
+        </li>
+    {% endfor %}
+    </ul>
+
+</body>
+</html>

@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FYNDACADEMY</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" 
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" 
+        crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" 
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" 
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" 
+        integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" 
+        crossorigin="anonymous"></script>
+    <link href="https://fonts.cdnfonts.com/css/tasa-orbiter-display" rel="stylesheet">
+    <style>
+        @import url('https://fonts.cdnfonts.com/css/tasa-orbiter-display');
+        
+        /* Global styles */
+        body {
+            font-family: 'TASA Orbiter Deck', sans-serif;
+            font-size: 1.2rem;
+            font-weight: 400;
+            background-color: #f4f7f9;  /* Light background for the page */
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Navbar styles */
+        .navbar {
+            margin-left: 0;
+            margin-right: 0;
+            background-color: #ffffff;
+            padding: 15px 0;
+        }
+
+        .navbar-nav {
+            display: flex;
+            justify-content: center; /* Center the nav items */
+            width: 100%;              /* Ensure the nav takes full width */
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+        .nav-item {
+            padding-top: 0;
+            color: #3A27DB;  /* Color for the nav items */
+        }
+
+        .nav-link {
+            color: #3A27DB;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        /* Active and hover styles for links */
+        .nav-link.active, .nav-link:hover {
+            color: #2d18a2;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            background: linear-gradient(45deg, #3A27DB, #5E48B6); /* Gradient background */
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .hero-section h1 {
+            font-size: 3rem;
+            font-weight: 700;
+        }
+
+        .hero-section p {
+            font-size: 1.2rem;
+        }
+
+        /* Responsive adjustments for smaller screens */
+        @media (max-width: 768px) {
+            .hero-section h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-section p {
+                font-size: 1rem;
+            }
+
+            .navbar-nav {
+                flex-direction: column;  /* Stack navbar items on smaller screens */
+                text-align: center;
+            }
+
+            .content-section {
+                padding: 40px 20px;
+            }
+
+            .tech-stack-icons {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 20px;
+            }
+
+            .tech-stack-icons div {
+                text-align: center;
+            }
+        }
+
+        /* Footer styles */
+        footer {
+            background-color: #3A27DB;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        /* Section content styles */
+        .content-section {
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .content-section h2 {
+            color: #3A27DB;
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        .content-section p {
+            font-size: 1.2rem;
+            color: #333;
+        }
+
+        .content-section ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .content-section ul li {
+            font-size: 1.1rem;
+            padding: 8px 0;
+            color: #555;
+        }
+
+        /* Tech Stack Icons */
+        .tech-stack-icons {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .tech-stack-icons img {
+            width: 60px;
+            height: 60px;
+        }
+
+        .tech-stack-icons p {
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+    </style>
+</head>
+
+<body>
+    <!-- Navbar with logo and menu items -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand d-flex align-items-center" href="#">
+            <img src="https://cdn.prod.website-files.com/670cbf146221ee06c3cdd73c/670cbf146221ee06c3cddee5_Fynd%20Academy%20Logo.svg" 
+                width="170" height="70" class="d-inline-block" alt="FYNDACADEMY Logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item">
+                    <a class="nav-link " href="/products/">Products</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">UserForm</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">SQL Viewer</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero-section">
+        <h1>Welcome to FYNDACADEMY</h1>
+        <p>Empowering your learning journey with innovative tech and solutions.</p>
+    </div>
+
+    <!-- Learning Flask Section -->
+    <div class="content-section">
+        <h2>Learning Flask by RAJAT JAIN Sir</h2>
+        <p>Welcome to the Flask learning section! Here, you will gain hands-on experience and deep insights into Flask, one of the most powerful Python frameworks.</p>
+        <p>Under the guidance of <strong>RAJAT JAIN Sir</strong>, we will explore topics such as:</p>
+        <ul>
+            <li>Flask Setup and Installation</li>
+            <li>Routing and Views</li>
+            <li>Flask Templates and Static Files</li>
+            <li>Handling Forms in Flask</li>
+            <li>Working with Databases using Flask</li>
+            <li>Flask REST APIs</li>
+        </ul>
+    </div>
+
+    <!-- Flask REST API Section -->
+    <div class="content-section">
+        <h2>Flask REST API</h2>
+        <p>Learn how to build scalable and efficient RESTful APIs with Flask. In this section, we will cover:</p>
+        <ul>
+            <li>Understanding REST Architecture</li>
+            <li>Creating RESTful Routes and Methods</li>
+            <li>Handling JSON data</li>
+            <li>Building APIs with Flask-RESTful</li>
+            <li>Testing and Deploying APIs</li>
+        </ul>
+        <p>Get ready to dive into real-world applications and start building your own APIs using Flask!</p>
+    </div>
+
+    <!-- Tech Stack Icons -->
+    <div class="content-section">
+        <h2>Technologies and Tools</h2>
+        <p>We are using the following technologies for our learning journey:</p>
+        <div class="tech-stack-icons">
+            <div>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/HTML5_logo_and_wordmark.svg" alt="HTML Logo">
+                <p>HTML</p>
+            </div>
+            <div>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/62/CSS3_logo.svg" alt="CSS Logo">
+                <p>CSS</p>
+            </div>
+            <div>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" alt="Python Logo">
+                <p>Python</p>
+            </div>
+            <div>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/67/Flask_logo.svg" alt="Flask Logo">
+                <p>Flask</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 FYNDACADEMY. All rights reserved.</p>
+    </footer>
+
+</body>
+
+</html>
