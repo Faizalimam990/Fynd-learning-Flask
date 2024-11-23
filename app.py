@@ -1,4 +1,4 @@
-from flask import Flask, request, render_template
+from flask import Flask, request, render_template,redirect
 from markupsafe import escape
 from models import Products
 from database import session
@@ -11,17 +11,38 @@ def Homepage():
 
 @app.route('/products/')
 def productpage():
-    addproduct()
+    
     product_get=get_product()
     
 
-    return render_template("Productpage.html",product_get=product_get)
+    return render_template("productpage.html",product_get=product_get)
 
 
 
+# @app.route('/addproducts/',methods=['POST','GET'])
+# def addproductpage():
+    
+#     name=request.form['name']
+#     price=int(request.form['Price'])
+#     quantity=int(request.form['quantity'])
+#     addproduct(name,price,quantity)
+#     return "<h1>Product added</h1>"
+        
+@app.get('/addproducts/')
+def product_add():
+    return render_template('addproduct.html')   
 
-def addproduct():
-    product1=Products(Name="Marvel Spiderman",Price=499,quantity=10)
+
+@app.post('/addproducts/')
+def product_post():
+    name=request.form['Name']
+    price=int(request.form['Price'])
+    quantity=int(request.form['quantity'])
+    addproduct(name,price,quantity)
+    return redirect ('/products/')
+
+def addproduct(name,price,quantity):
+    product1=Products(Name=name,Price=price,quantity=quantity)
     session.add(product1)
     session.commit()
 

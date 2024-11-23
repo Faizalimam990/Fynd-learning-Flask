@@ -6,6 +6,7 @@ from models import Base
 DATABASE_URL = "sqlite:///database.db"
 
 engine = create_engine('mysql+pymysql://FYNDflaskdb:faizal6263@FYNDflaskdb.mysql.pythonanywhere-services.com/FYNDflaskdb$fynd')
+# engine=create_engine(DATABASE_URL)
 Base.metadata.create_all(engine)
 
 Session = sessionmaker(bind = engine)
