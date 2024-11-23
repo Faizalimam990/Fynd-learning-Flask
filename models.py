@@ -8,5 +8,5 @@ class Products(Base):
     __tablename__='Products'
     id=Column(Integer,primary_key=True)
     Name=Column(String(255),nullable=False)
-    Price=Column(String,nullable=False)
-    quantity=Column(String,nullable=False)
+    Price=Column(Integer,nullable=False)
+    quantity=Column(Integer,nullable=False)
